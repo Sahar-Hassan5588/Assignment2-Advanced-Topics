@@ -66,6 +66,26 @@ Contains previous versions of the assignment notebooks:
 ### Report Progress Folder
 Contains progress reports and intermediate documentation for the assignment.
 
+## Replication Steps
+
+To replicate the analysis and results of this project, follow these steps in order:
+
+1. **Collect Data from All Providers**:
+   - Run `DC1_Dataset_Generation_GoogleProvider.ipynb` to generate datasets for Google Gemma models.
+   - Run `DC2_Dataset_Generation_MicrosoftProvider.ipynb` to generate datasets for Microsoft Phi models.
+   - Run `DC3_Dataset_Generation_MetaProvider.ipynb` to generate datasets for Meta Llama models.
+   - Run `DC4_Dataset_Generation_MistralProvider.ipynb` to generate datasets for Mistral models.
+   - This will populate the `Dataset/Per provider/` subfolders with individual provider datasets.
+
+2. **Data Processing and Validation**:
+   - Run `DP1_Data_Processing_&_Validation.ipynb`.
+   - This notebook feeds on the datasets generated in the DC phase, combines them, and processes the data to produce one high-quality unified dataset.
+   - The output is `Dataset/combined_dataset_final.csv`, which integrates all provider outputs after cleaning, validation, and quality assurance.
+
+3. **Evaluate Trustworthiness**:
+   - Run `EV_Trustworthiness_Evaluation_of_LLMs_Bias,_Fairness,_and_Reasoning_in_Phishing_Vulnerability.ipynb`.
+   - This notebook uses the combined dataset to evaluate the trustworthiness of LLMs, analyzing bias, fairness, and reasoning patterns in phishing vulnerability assessments across all providers.
+
 ## Project Goals
 - Evaluate LLM consistency in decision-making under identical conditions
 - Analyze potential biases in vulnerability assessments based on demographic attributes
