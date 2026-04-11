@@ -11,6 +11,13 @@ Assignment2-Advanced-Topics/
 │   ├── DC2_Dataset_Generation_MicrosoftProvider.ipynb
 │   ├── DC3_Dataset_Generation_MetaProvider.ipynb
 │   └── DC4_Dataset_Generation_MistralProvider.ipynb
+├── Dataset/
+│   ├── Per provider/
+│   │   ├── Google/
+│   │   ├── Meta/
+│   │   ├── Microsoft/
+│   │   └── Mistral/
+│   └── combined_dataset_final.csv
 ├── DP1_Data_Processing_&_Validation.ipynb
 ├── EV_Trustworthiness_Evaluation_of_LLMs_Bias,_Fairness,_and_Reasoning_in_Phishing_Vulnerability.ipynb
 ├── README.md
@@ -33,6 +40,16 @@ These notebooks generate synthetic datasets by prompting LLMs to create diverse 
 - **DC3_Dataset_Generation_MetaProvider.ipynb**: Dataset generation using Meta's LLM provider (Llama models: Llama-3.2-3B-Instruct, Meta-Llama-3.1-8B-Instruct). Generates diverse personas and assesses their phishing vulnerability, supporting analysis of fairness and decision consistency.
 
 - **DC4_Dataset_Generation_MistralProvider.ipynb**: Dataset generation using Mistral's LLM provider (Mistral models: Ministral-8B-Instruct-2410, Mistral-7B-Instruct-v0.1, Mistral-7B-Instruct-v0.2). Creates structured datasets for evaluating reasoning patterns and potential biases in vulnerability assessments.
+
+### Dataset Folder
+Contains the generated and processed datasets used in the evaluation.
+
+- **Per provider/**: Subfolders for each LLM provider containing their individual generated datasets before integration.
+  - **Google/**: Datasets from Google Gemma models.
+  - **Meta/**: Datasets from Meta Llama models.
+  - **Microsoft/**: Datasets from Microsoft Phi models.
+  - **Mistral/**: Datasets from Mistral models.
+- **combined_dataset_final.csv**: The final unified dataset combining all provider outputs after processing and validation, ready for trustworthiness evaluation.
 
 ### Data Processing Notebook
 - **DP1_Data_Processing_&_Validation.ipynb**: Integrates and cleans datasets from all providers. Performs structural validation, handles data quality issues like missing selections, parsing errors, and ensures consistency across columns and data types.
